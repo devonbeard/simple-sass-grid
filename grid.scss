@@ -58,7 +58,7 @@ $gutter-width: percentage( 12px / $max-width ); // with 12px gutters
   .col#{$i}-centered {
     float: none;
     margin: 0 auto;
-    width: column($i);
+    width: column($i) + $gutter-width;
   }
 
 }

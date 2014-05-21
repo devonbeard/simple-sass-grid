@@ -34,7 +34,7 @@
 .col1-centered {
   float: none;
   margin: 0 auto;
-  width: 7.0%; }
+  width: 8.33333%; }
 
 .col2 {
   float: left;
@@ -44,7 +44,7 @@
 .col2-centered {
   float: none;
   margin: 0 auto;
-  width: 15.33333%; }
+  width: 16.66667%; }
 
 .col3 {
   float: left;
@@ -54,7 +54,7 @@
 .col3-centered {
   float: none;
   margin: 0 auto;
-  width: 23.66667%; }
+  width: 25.0%; }
 
 .col4 {
   float: left;
@@ -64,7 +64,7 @@
 .col4-centered {
   float: none;
   margin: 0 auto;
-  width: 32.0%; }
+  width: 33.33333%; }
 
 .col5 {
   float: left;
@@ -74,7 +74,7 @@
 .col5-centered {
   float: none;
   margin: 0 auto;
-  width: 40.33333%; }
+  width: 41.66667%; }
 
 .col6 {
   float: left;
@@ -84,7 +84,7 @@
 .col6-centered {
   float: none;
   margin: 0 auto;
-  width: 48.66667%; }
+  width: 50.0%; }
 
 .col7 {
   float: left;
@@ -94,7 +94,7 @@
 .col7-centered {
   float: none;
   margin: 0 auto;
-  width: 57.0%; }
+  width: 58.33333%; }
 
 .col8 {
   float: left;
@@ -104,7 +104,7 @@
 .col8-centered {
   float: none;
   margin: 0 auto;
-  width: 65.33333%; }
+  width: 66.66667%; }
 
 .col9 {
   float: left;
@@ -114,7 +114,7 @@
 .col9-centered {
   float: none;
   margin: 0 auto;
-  width: 73.66667%; }
+  width: 75.0%; }
 
 .col10 {
   float: left;
@@ -124,7 +124,7 @@
 .col10-centered {
   float: none;
   margin: 0 auto;
-  width: 82.0%; }
+  width: 83.33333%; }
 
 .col11 {
   float: left;
@@ -134,7 +134,7 @@
 .col11-centered {
   float: none;
   margin: 0 auto;
-  width: 90.33333%; }
+  width: 91.66667%; }
 
 .col12 {
   float: left;
@@ -144,7 +144,7 @@
 .col12-centered {
   float: none;
   margin: 0 auto;
-  width: 98.66667%; }
+  width: 100.0%; }
 
 @media screen and (max-width: 800px) {
   .container {

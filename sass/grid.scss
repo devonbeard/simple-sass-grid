@@ -1,7 +1,7 @@
 // Grid System using Percents
 // -------------------------------------------------------
 
-$max-width: 960px; // max width of main container
+$max-width: 900px; // max width of main container
 $total-columns: 12;  // total number of columns
 $column-width: percentage( 75px / $max-width ); // columns are 75px wide
 $gutter-width: percentage( 12px / $max-width ); // with 12px gutters
@@ -21,6 +21,11 @@ $gutter-width: percentage( 12px / $max-width ); // with 12px gutters
   &:after {
     clear: both;
   }
+}
+
+.container{
+  margin: 0 auto;
+  width: $max-width;
 }
 
 .row{
