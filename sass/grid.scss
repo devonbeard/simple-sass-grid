@@ -1,0 +1,60 @@
+// Grid System using Percents
+// -------------------------------------------------------
+
+$max-width: 960px; // max width of main container
+$total-columns: 12;  // total number of columns
+$column-width: percentage( 75px / $max-width ); // columns are 75px wide
+$gutter-width: percentage( 12px / $max-width ); // with 12px gutters
+
+@function column( $column-size, $gutter: $gutter-width){
+  @return $column-width * $column-size - $gutter-width;
+}
+
+%clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.row{
+  @extend %clearfix;
+  margin-bottom: 30px;
+  margin-left: -$gutter-width;
+
+  @media (max-width: em-font(800px)) {
+    margin-left: 0
+  }
+}
+
+@for $i from 1 through $total-columns {
+  .col#{$i} {
+    float: left;
+    margin-left: $gutter-width;
+    width: column($i);
+
+    @media (max-width: em-font(800px)) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .col#{$i}-centered {
+    float: none;
+    margin: 0 auto;
+    width: column($i);
+
+    @media (max-width: em-font(800px)) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+

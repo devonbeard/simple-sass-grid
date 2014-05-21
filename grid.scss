@@ -1,0 +1,87 @@
+// Grid System using Percents
+// -------------------------------------------------------
+*{
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+$max-width: 900px; // max width of main container
+$total-columns: 12;  // total number of columns
+$column-width: percentage( 75px / $max-width ); // columns are 75px wide
+$gutter-width: percentage( 12px / $max-width ); // with 12px gutters
+
+@function column( $column-size ) {
+  @return $column-width * $column-size - $gutter-width;
+}
+
+%clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: $max-width;
+}
+
+.row{
+  @extend %clearfix;
+  margin-bottom: 30px;
+  margin-left: -$gutter-width;
+
+  @media (max-width: 800px) {
+    margin-left: 0
+  }
+}
+
+
+@for $i from 1 through $total-columns {
+
+  .col#{$i} {
+    float: left;
+    margin-left: $gutter-width;
+    width: column($i);
+  }
+
+  .col#{$i}-centered {
+    float: none;
+    margin: 0 auto;
+    width: column($i);
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: 800px) {
+
+  .container{
+    width: 95%;
+  }
+
+  .row{
+    margin-left: 0
+  }
+
+  @for $i from 1 through $total-columns {
+
+    .col#{$i}, .col#{$i}-centered {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+
+  }
+
+}
